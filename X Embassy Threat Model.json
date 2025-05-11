@@ -1,0 +1,2336 @@
+{
+  "version": "2.4.1",
+  "summary": {
+    "title": "X Embassy Threat Model",
+    "owner": "Hadeer Amr 22010450 ",
+    "description": "The Embassy of X in YY is the official diplomatic mission representing X’s government and citizens in YY. Located in YY, the embassy provides a wide range of consular services including visa issuance, passport renewal, and assistance to X nationals residing or traveling in YY. It also works to strengthen political, economic, cultural, and educational ties between the two countries.\n\nThe embassy serves as a vital bridge for bilateral cooperation, supporting trade partnerships, hosting cultural events, and facilitating dialogue on shared interests. With a team of trained diplomats and support staff, the Embassy of X is committed to promoting mutual understanding and protecting the rights and interests of X citizens abroad.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Rewan Salah 20221447143"
+      },
+      {
+        "name": "Marwan Ashraf 20221311732"
+      },
+      {
+        "name": "Aya Mohamed 20221380245"
+      },
+      {
+        "name": "Abdelraman Raslan 20221460102"
+      }
+    ],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "New STRIDE diagram",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.4.1",
+        "cells": [
+          {
+            "position": {
+              "x": 874.75,
+              "y": -60
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "employee A1"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 1,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "d83f61c5-ea3c-4dda-8841-7ed68ab30d0a"
+                },
+                {
+                  "group": "right",
+                  "id": "b30f479d-a9b3-48ca-88f6-85d31be42fcd"
+                },
+                {
+                  "group": "bottom",
+                  "id": "44fd5f90-885a-4bae-8b3f-b9975eaf0e07"
+                },
+                {
+                  "group": "left",
+                  "id": "9ab794a1-3568-4461-87d7-d0bae2dd3888"
+                }
+              ]
+            },
+            "id": "5c60c0b6-62d4-4ce9-988f-69e546ac442b",
+            "data": {
+              "type": "tm.Actor",
+              "name": "employee A1",
+              "description": "embassy staff member",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "ab4b442e-01b3-499a-93b5-bffdac65b882",
+                  "title": "Cracked Software Vulnerability",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An embassy staff member installs unauthorized cracked software on an internal workstation. The software contains a backdoor that allows an attacker to infiltrate the internal network. Once inside, the attacker moves laterally across systems, escalates privileges",
+                  "mitigation": "Enforce strict software policies as blocklisting ensure monitoring and detecting unauthorized software installations make sure of regularly patch and update systems you can isolate sensitive networks and use endpoint detection & response (EDR) and conduct awareness training for employees on the risks of pirated software",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": ""
+                },
+                {
+                  "id": "64f52265-dab6-42d8-b241-1fccf1863688",
+                  "title": "Insider Threat by Malicious Employee",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Employee misuses authorized access to extract sensitive citizen data such as passport numbers, visa records, or diplomatic communication. They may leak the data intentionally or sell it to third parties. Since this is a legitimate user, their actions may go unnoticed or be hard to trace",
+                  "mitigation": "Apply least privilege access control and enable user behavior analytics (UBA) and anomaly detection and log and monitor all user activity.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 3
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 1070,
+              "y": 220
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Embassy \nDataBase \nS1"
+              },
+              "topLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "zIndex": 2,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "4e9cba7b-7154-4a99-b83a-6663f567927f"
+                },
+                {
+                  "group": "right",
+                  "id": "307dbfd6-dc75-4e2d-9cc6-edc025d98942"
+                },
+                {
+                  "group": "bottom",
+                  "id": "11784e40-9687-431c-89e0-616ea86ed081"
+                },
+                {
+                  "group": "left",
+                  "id": "6a53b5ae-6af5-43dd-b383-9ffb9912dd48"
+                }
+              ]
+            },
+            "id": "8ea08fa8-d6c6-4efe-af63-c38106de0279",
+            "data": {
+              "type": "tm.Store",
+              "name": "Embassy \nDataBase \nS1",
+              "description": "to store information like visa applications, citizen data, appointments",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "cf282ffa-4389-4ae3-bfb5-913582886211",
+                  "title": "Unencrypted Data at Rest",
+                  "status": "Mitigated",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "Sensitive data like visa records, birth certificates, and personal IDs are stored unencrypted in the database or local files",
+                  "mitigation": "Enable full-disk encryption or row-level database encryption using strong algorithms as AES-256",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                },
+                {
+                  "id": "43fc061e-2002-4095-a796-baf8d805a57b",
+                  "title": " Privilege Misuse",
+                  "status": "Mitigated",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "An insider with legitimate access may intentionally or accidentally alter or delete critical records leading to loss of integrity and service disruption. This could go undetected without proper logging and auditing.",
+                  "mitigation": "Implement robust logging and audit trails for all database operations and enforce Role-Based Access Control (RBAC) and least privilege\n\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": ""
+                },
+                {
+                  "id": "d466c68a-03f1-4982-838d-b0f1a18e2158",
+                  "title": "ransoware attack",
+                  "status": "Mitigated",
+                  "severity": "Critical",
+                  "type": "Denial of service",
+                  "description": "attacker inside network deploy ransomware ",
+                  "mitigation": "keeping regular backup on another place \nperfered more than 1 backup hardcopy and softcopy \nensure monitoring and logging ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 30,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 1
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 130,
+              "y": 150
+            },
+            "size": {
+              "width": 100,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "Embassy\nWebsite\nP1"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 4,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "912e8361-6ca0-4f2e-9f98-c062bbf9cb28"
+                },
+                {
+                  "group": "right",
+                  "id": "7af33cc1-34f2-4ba9-be00-0c395ebf67ec"
+                },
+                {
+                  "group": "bottom",
+                  "id": "4a546fec-6906-44e2-9014-7987faa273d4"
+                },
+                {
+                  "group": "left",
+                  "id": "bb52dfa9-a36d-47ac-9b84-d3ccc0dd17a6"
+                }
+              ]
+            },
+            "id": "cfe4539f-340e-4bb2-be92-56134cea5037",
+            "data": {
+              "type": "tm.Process",
+              "name": "Embassy\nWebsite\nP1",
+              "description": "Website used by citizens and travelers to access embassy services online",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "7056b7c3-55a2-4d9d-9bf0-61aea5a00c34",
+                  "title": "SQL Injection in Web Portal",
+                  "status": "Mitigated",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Malicious SQL code is injected through user inputs",
+                  "mitigation": "Use parameterized queries and ensuring input validation and sanitization ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                },
+                {
+                  "id": "486d25b2-72e9-4de1-b597-f44dfad1bbea",
+                  "title": "Brute Force attack ",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Repeated login attempts using automated guessing",
+                  "mitigation": "Implement account lockouts, 2FA, and IP blacklisting",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": ""
+                },
+                {
+                  "id": "72b897c7-001b-4d0d-97c5-72dea096ad8c",
+                  "title": "Cross-Site Scripting XSS",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "The website allows unvalidated input in fields as forms and  search enabling attackers to inject malicious scripts. This can lead to session hijacking, defacement, or data theft",
+                  "mitigation": "Implement input validation and output encoding and apply Content Security Policy (CSP) headers",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 3,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 1110,
+              "y": 410
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "admin A2"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "zIndex": 5,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "d83f61c5-ea3c-4dda-8841-7ed68ab30d0a"
+                },
+                {
+                  "group": "right",
+                  "id": "b30f479d-a9b3-48ca-88f6-85d31be42fcd"
+                },
+                {
+                  "group": "bottom",
+                  "id": "44fd5f90-885a-4bae-8b3f-b9975eaf0e07"
+                },
+                {
+                  "group": "left",
+                  "id": "9ab794a1-3568-4461-87d7-d0bae2dd3888"
+                }
+              ]
+            },
+            "id": "8804c67c-b0a0-43cb-b12b-fa90e74c613f",
+            "data": {
+              "type": "tm.Actor",
+              "name": "admin A2",
+              "description": "embassy staff 2",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "77dfedb1-2143-46cb-bc93-ab2a192c9b12",
+                  "title": "Spear Phishing",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "An attacker targets a system administrator with a phishing email that imitates an internal embassy IT notice. The admin unknowingly enters their credentials on a fake login page. The attacker then uses these credentials to gain administrative access to embassy systems, modify permissions, disable logging, or deploy malware.",
+                  "mitigation": "Enforce Multi-Factor Authentication (MFA) for admin accounts and provide phishing awareness training and use privileged access management (PAM) systems.\n\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": ""
+                },
+                {
+                  "id": "b46ff3e6-74a6-4c3b-83dc-29101948e558",
+                  "title": "Voice Impersonation via Deepfake",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Repudiation",
+                  "description": "A voice deepfake of an admin is used over phone/email to request unauthorized changes to records.",
+                  "mitigation": "enforce policy restrict sensitive actions to be performed only through authenticated admin portals  never based on audio/email requests alone and train all staff and require all sensitive requests to be verified through a secure multi-step process \n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 3,
+                "repudiation": 5
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 876,
+              "y": 380
+            },
+            "size": {
+              "width": 110,
+              "height": 120
+            },
+            "attrs": {
+              "text": {
+                "text": "Monitoring \nTools\n P5"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 6,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "912e8361-6ca0-4f2e-9f98-c062bbf9cb28"
+                },
+                {
+                  "group": "right",
+                  "id": "7af33cc1-34f2-4ba9-be00-0c395ebf67ec"
+                },
+                {
+                  "group": "bottom",
+                  "id": "4a546fec-6906-44e2-9014-7987faa273d4"
+                },
+                {
+                  "group": "left",
+                  "id": "bb52dfa9-a36d-47ac-9b84-d3ccc0dd17a6"
+                }
+              ]
+            },
+            "id": "40593b1d-53c8-46b4-b45c-92c3e2c8cd67",
+            "data": {
+              "type": "tm.Process",
+              "name": "Monitoring \nTools\n P5",
+              "description": " to check system performance and detect any problems",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "da89c563-3705-4d51-a3f2-55124b2ef4a6",
+                  "title": "Log Forgery Attack\t",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Attack alters system logs to hide traces of intrusion",
+                  "mitigation": "using PAM to monitor Privileged accounts in the system \nalso make sure of implementing MFA \nrestrict access to log files and  implement centralized logging",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "69fc5865-a640-4362-8e21-f3cd45d6ae42",
+                  "title": "Log Flooding Attack",
+                  "status": "Mitigated",
+                  "severity": "Critical",
+                  "type": "Denial of service",
+                  "description": " An attacker floods the embassy’s monitoring tools with excessive fake logs, error messages, or alerts. This overwhelms the system, consumes storage and CPU, and hides real malicious activities under the noise.",
+                  "mitigation": "Implement log ingestion rate limits per source to prevent abuse and sanitize and normalize log input to avoid fake or malformed entries",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 2,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 830,
+              "y": 185.0000000000001
+            },
+            "size": {
+              "width": 120,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "Email & \nNotification \nSystem\n P3"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 7,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "912e8361-6ca0-4f2e-9f98-c062bbf9cb28"
+                },
+                {
+                  "group": "right",
+                  "id": "7af33cc1-34f2-4ba9-be00-0c395ebf67ec"
+                },
+                {
+                  "group": "bottom",
+                  "id": "4a546fec-6906-44e2-9014-7987faa273d4"
+                },
+                {
+                  "group": "left",
+                  "id": "bb52dfa9-a36d-47ac-9b84-d3ccc0dd17a6"
+                }
+              ]
+            },
+            "id": "a3f4a4e7-125c-4e3a-8167-43508cc04a53",
+            "data": {
+              "type": "tm.Process",
+              "name": "Email & \nNotification \nSystem\n P3",
+              "description": "ends updates to users (like appointment confirmation or document requests)",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "aa856606-ec08-4783-876f-a8c631efe3f4",
+                  "title": "Notification Spam Attack",
+                  "status": "Mitigated",
+                  "severity": "Critical",
+                  "type": "Denial of service",
+                  "description": "Email system overwhelmed by fake alerts, delaying real notifications",
+                  "mitigation": "using backup server and implement rate limiting \nIPS can be used to stop and detect malicious upnormal activities \nalso implementing firewall and strict rules ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "2957bf8b-54d3-4323-9946-cf409dcf4f9e",
+                  "title": "Email Spoofing Attack",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Attackers send phishing emails impersonating the embassy",
+                  "mitigation": "Educate users and give them good training monitor for impersonation",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 4,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 530,
+              "y": 420
+            },
+            "size": {
+              "width": 100,
+              "height": 100
+            },
+            "attrs": {
+              "text": {
+                "text": "Visa \nApplication \nSystem\n P6"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 8,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "912e8361-6ca0-4f2e-9f98-c062bbf9cb28"
+                },
+                {
+                  "group": "right",
+                  "id": "7af33cc1-34f2-4ba9-be00-0c395ebf67ec"
+                },
+                {
+                  "group": "bottom",
+                  "id": "4a546fec-6906-44e2-9014-7987faa273d4"
+                },
+                {
+                  "group": "left",
+                  "id": "bb52dfa9-a36d-47ac-9b84-d3ccc0dd17a6"
+                }
+              ]
+            },
+            "id": "735a72cc-768b-448d-bf2c-6627d59eb304",
+            "data": {
+              "type": "tm.Process",
+              "name": "Visa \nApplication \nSystem\n P6",
+              "description": "Visa Application System. This system is responsible for receiving and processing visa applications submitted from the embassy's website (P1).",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "0e90869d-56a5-4bf9-9984-437c368df4ac",
+                  "title": "Authentication Bypass ",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Authentication bypass occurs when an attacker is able to access a system or service without proper login credentials. This may be due to insecure session management, logic flaws in authentication routines, poorly protected admin endpoints, or disabled checks in development environments.\n",
+                  "mitigation": "Use secure session management\nConduct regular security testing\nImplement MFA for both users and admins",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                },
+                {
+                  "id": "8ff77ab5-934a-4ff4-9b5a-78b67bf91539",
+                  "title": "Error Handling Vulnerability",
+                  "status": "Mitigated",
+                  "severity": "Critical",
+                  "type": "Information disclosure",
+                  "description": "System exposes overly detailed error messages  to the end user, it unintentionally reveals internal workings of the system. This help an attacker understand the system architecture, discover technology stacks , identify potential injection points and find admin paths and database names.",
+                  "mitigation": "Show generic error messages to end users and set proper error reporting levels in server configuration and sanitize inputs and filter outputs to prevent sensitive data from leaking via APIs or UI.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 4,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 570,
+              "y": -60
+            },
+            "size": {
+              "width": 110,
+              "height": 140
+            },
+            "attrs": {
+              "text": {
+                "text": "Public \nRelations \n& Events \nManagement \nSystem\n P4"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 9,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "912e8361-6ca0-4f2e-9f98-c062bbf9cb28"
+                },
+                {
+                  "group": "right",
+                  "id": "7af33cc1-34f2-4ba9-be00-0c395ebf67ec"
+                },
+                {
+                  "group": "bottom",
+                  "id": "4a546fec-6906-44e2-9014-7987faa273d4"
+                },
+                {
+                  "group": "left",
+                  "id": "bb52dfa9-a36d-47ac-9b84-d3ccc0dd17a6"
+                }
+              ]
+            },
+            "id": "a0c8023b-ff94-43a5-b343-35162222e42d",
+            "data": {
+              "type": "tm.Process",
+              "name": "Public \nRelations \n& Events \nManagement \nSystem\n P4",
+              "description": "Public Relations and Events Management. Responsible for managing public activities, parties, conferences, or any event organized by the embassy. A1 staff member directly interacts with the office.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "515ad118-2e45-4f85-b729-6e4ea8397664",
+                  "title": "DNS Spoofing",
+                  "status": "Mitigated",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "DNS spoofing (also known as DNS cache poisoning) is an attack where an attacker redirects legitimate user traffic to a fake website by manipulating DNS records. For example, a user trying to access visa.embassy.gov may unknowingly be sent to a malicious clone site controlled by an attacker. This is commonly used to harvest credentials or spread malware.\n",
+                  "mitigation": "Use DNSSEC to secure DNS queries and prevent tampering\nMonitor DNS records for any unauthorized changes or suspicious activities.\nRegularly update DNS server software and configurations to minimize vulnerabilities",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                },
+                {
+                  "id": "d1068d38-db13-40f1-af3b-9760530052ef",
+                  "title": "Unintentional Information Exposure via Public Communications",
+                  "status": "Mitigated",
+                  "severity": "Low",
+                  "type": "Information disclosure",
+                  "description": "During public communications such as press releases, social media announcements, or stakeholder briefings, sensitive technical or procedural information may be unintentionally revealed  this is a real-world threat that attackers can exploit during the reconnaissance phase to craft more tailored attacks and exploit known infrastructure components.",
+                  "mitigation": "Establish and enforce a Communications and Social Media Policy for all staff and implement an approval workflow for all public communications\n\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 4,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 415,
+              "y": 100.00000000000011
+            },
+            "size": {
+              "width": 130,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": " Citizen \nAssistance\n& Travel \nSupport \nPortal\n P2"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 10,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "912e8361-6ca0-4f2e-9f98-c062bbf9cb28"
+                },
+                {
+                  "group": "right",
+                  "id": "7af33cc1-34f2-4ba9-be00-0c395ebf67ec"
+                },
+                {
+                  "group": "bottom",
+                  "id": "4a546fec-6906-44e2-9014-7987faa273d4"
+                },
+                {
+                  "group": "left",
+                  "id": "bb52dfa9-a36d-47ac-9b84-d3ccc0dd17a6"
+                }
+              ]
+            },
+            "id": "6a3232a0-42fa-40ff-93c3-7a56c513b9c5",
+            "data": {
+              "type": "tm.Process",
+              "name": " Citizen \nAssistance\n& Travel \nSupport \nPortal\n P2",
+              "description": "This module focuses on providing emergency support and assistance for citizens abroad. It manages requests for help, travel-related queries, and emergency contact procedures. It communicates with the Email & Notification System to send alerts or assistance confirmations to both citizens and internal staff. It can also retrieve or update case-related information stored in the central database.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "3d226434-92ea-4a39-9a05-4e8c233b3897",
+                  "title": "Abusing Misconfigured Permissions",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": " An employee accesses and leaks personal user data",
+                  "mitigation": "Automate Misconfiguration Detection\nEnforce Periodic Access Reviews\nApply the Principle of Least Privilege (PoLP)\nImplement Role-Based Access Control (RBAC)\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": ""
+                },
+                {
+                  "id": "bf528c0a-7bd7-42ab-8ddb-13c7dfffc4ac",
+                  "title": "Man-in-the-Middle  Attack",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "An attacker intercepts and possibly modifies data in transit between external users and embassy systems.",
+                  "mitigation": "Enforce strong TLS/SSL encryption and ensure secure authentication as OAuth2",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 2,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "c8ad74f2-0e48-4773-a567-ce0b706ce1d4",
+            "source": {
+              "cell": "8804c67c-b0a0-43cb-b12b-fa90e74c613f",
+              "port": "9ab794a1-3568-4461-87d7-d0bae2dd3888"
+            },
+            "target": {
+              "cell": "40593b1d-53c8-46b4-b45c-92c3e2c8cd67",
+              "port": "7af33cc1-34f2-4ba9-be00-0c395ebf67ec"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "9e5fa958-18a6-49cb-8755-efaf5dc082b1",
+            "source": {
+              "cell": "cfe4539f-340e-4bb2-be92-56134cea5037",
+              "port": "912e8361-6ca0-4f2e-9f98-c062bbf9cb28"
+            },
+            "target": {
+              "cell": "a0c8023b-ff94-43a5-b343-35162222e42d",
+              "port": "bb52dfa9-a36d-47ac-9b84-d3ccc0dd17a6"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "126cba12-2a02-490e-8d23-58d0b9051eb1",
+            "source": {
+              "cell": "5c60c0b6-62d4-4ce9-988f-69e546ac442b",
+              "port": "9ab794a1-3568-4461-87d7-d0bae2dd3888"
+            },
+            "target": {
+              "cell": "a0c8023b-ff94-43a5-b343-35162222e42d",
+              "port": "7af33cc1-34f2-4ba9-be00-0c395ebf67ec"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "2c58400c-28d4-4a00-8e28-7f6a87168a8c",
+            "source": {
+              "cell": "cfe4539f-340e-4bb2-be92-56134cea5037",
+              "port": "7af33cc1-34f2-4ba9-be00-0c395ebf67ec"
+            },
+            "target": {
+              "cell": "6a3232a0-42fa-40ff-93c3-7a56c513b9c5",
+              "port": "bb52dfa9-a36d-47ac-9b84-d3ccc0dd17a6"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "ee72f982-24b5-4c2c-9a2b-b88de926f26f",
+            "source": {
+              "cell": "6a3232a0-42fa-40ff-93c3-7a56c513b9c5",
+              "port": "7af33cc1-34f2-4ba9-be00-0c395ebf67ec"
+            },
+            "target": {
+              "cell": "a3f4a4e7-125c-4e3a-8167-43508cc04a53",
+              "port": "bb52dfa9-a36d-47ac-9b84-d3ccc0dd17a6"
+            },
+            "vertices": [
+              {
+                "x": 640,
+                "y": 180
+              },
+              {
+                "x": 740,
+                "y": 180
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "45bfe2d3-c915-4b87-bb5b-2a45a9128621",
+            "source": {
+              "cell": "dc5a8d06-9af6-486d-a823-894711bfb0ac",
+              "port": "7af33cc1-34f2-4ba9-be00-0c395ebf67ec"
+            },
+            "target": {
+              "cell": "a3f4a4e7-125c-4e3a-8167-43508cc04a53",
+              "port": "bb52dfa9-a36d-47ac-9b84-d3ccc0dd17a6"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "913fb23d-08cb-4177-a96a-e35dc014b56e",
+            "source": {
+              "cell": "cfe4539f-340e-4bb2-be92-56134cea5037",
+              "port": "7af33cc1-34f2-4ba9-be00-0c395ebf67ec"
+            },
+            "target": {
+              "cell": "dc5a8d06-9af6-486d-a823-894711bfb0ac",
+              "port": "bb52dfa9-a36d-47ac-9b84-d3ccc0dd17a6"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "b7fe4748-e85a-4055-b7c7-ff73bc4d971d",
+            "source": {
+              "cell": "a3f4a4e7-125c-4e3a-8167-43508cc04a53",
+              "port": "4a546fec-6906-44e2-9014-7987faa273d4"
+            },
+            "target": {
+              "cell": "40593b1d-53c8-46b4-b45c-92c3e2c8cd67",
+              "port": "912e8361-6ca0-4f2e-9f98-c062bbf9cb28"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "7b0e9b81-1dac-496c-96eb-c31699d82997",
+            "source": {
+              "cell": "dc5a8d06-9af6-486d-a823-894711bfb0ac",
+              "port": "7af33cc1-34f2-4ba9-be00-0c395ebf67ec"
+            },
+            "target": {
+              "cell": "40593b1d-53c8-46b4-b45c-92c3e2c8cd67",
+              "port": "bb52dfa9-a36d-47ac-9b84-d3ccc0dd17a6"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "9bfbed41-04e8-4def-9416-569393e674ce",
+            "source": {
+              "cell": "a0c8023b-ff94-43a5-b343-35162222e42d",
+              "port": "7af33cc1-34f2-4ba9-be00-0c395ebf67ec"
+            },
+            "target": {
+              "cell": "8ea08fa8-d6c6-4efe-af63-c38106de0279",
+              "port": "4e9cba7b-7154-4a99-b83a-6663f567927f"
+            },
+            "vertices": [
+              {
+                "x": 780,
+                "y": 70
+              },
+              {
+                "x": 910,
+                "y": 90
+              },
+              {
+                "x": 1050,
+                "y": 130
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "f347c5e7-52b8-4cf0-8426-25697bc32b48",
+            "source": {
+              "cell": "a3f4a4e7-125c-4e3a-8167-43508cc04a53",
+              "port": "7af33cc1-34f2-4ba9-be00-0c395ebf67ec"
+            },
+            "target": {
+              "cell": "8ea08fa8-d6c6-4efe-af63-c38106de0279",
+              "port": "6a53b5ae-6af5-43dd-b383-9ffb9912dd48"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "46f290c5-306f-49c6-a2a3-edeed77ea728",
+            "source": {
+              "cell": "cfe4539f-340e-4bb2-be92-56134cea5037",
+              "port": "4a546fec-6906-44e2-9014-7987faa273d4"
+            },
+            "target": {
+              "cell": "735a72cc-768b-448d-bf2c-6627d59eb304",
+              "port": "bb52dfa9-a36d-47ac-9b84-d3ccc0dd17a6"
+            },
+            "vertices": []
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "1b136bca-9f57-4432-a588-61ce71520efe",
+            "source": {
+              "cell": "735a72cc-768b-448d-bf2c-6627d59eb304",
+              "port": "7af33cc1-34f2-4ba9-be00-0c395ebf67ec"
+            },
+            "target": {
+              "cell": "40593b1d-53c8-46b4-b45c-92c3e2c8cd67",
+              "port": "4a546fec-6906-44e2-9014-7987faa273d4"
+            },
+            "vertices": [
+              {
+                "x": 720,
+                "y": 470
+              },
+              {
+                "x": 860,
+                "y": 520
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "21a81409-b893-4424-938b-15a79b7594b1",
+            "source": {
+              "cell": "a0c8023b-ff94-43a5-b343-35162222e42d",
+              "port": "4a546fec-6906-44e2-9014-7987faa273d4"
+            },
+            "target": {
+              "cell": "a3f4a4e7-125c-4e3a-8167-43508cc04a53",
+              "port": "912e8361-6ca0-4f2e-9f98-c062bbf9cb28"
+            },
+            "vertices": [
+              {
+                "x": 690,
+                "y": 120
+              },
+              {
+                "x": 840,
+                "y": 140
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "EXTERNAL\nBOUNDARY",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "EXTERNAL\nBOUNDARY"
+            ],
+            "id": "ecdbf7f5-d82c-4a10-ae2e-42cea74fe916",
+            "source": {
+              "x": 220,
+              "y": 10
+            },
+            "target": {
+              "x": 140,
+              "y": 560
+            },
+            "vertices": [
+              {
+                "x": 290,
+                "y": 310
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "MONITIRING\nBOUNDARY",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "MONITIRING\nBOUNDARY"
+            ],
+            "id": "ed65b939-5cde-4cae-b68e-e31dd3d8589a",
+            "source": {
+              "x": 1260,
+              "y": 360
+            },
+            "target": {
+              "x": 930,
+              "y": 655
+            },
+            "vertices": [
+              {
+                "x": 990,
+                "y": 330
+              },
+              {
+                "x": 850,
+                "y": 370
+              },
+              {
+                "x": 810,
+                "y": 500
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": 490,
+              "y": 260
+            },
+            "size": {
+              "width": 110,
+              "height": 130
+            },
+            "attrs": {
+              "text": {
+                "text": "Consular \nServices \nModule\n P7"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "zIndex": 11,
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "912e8361-6ca0-4f2e-9f98-c062bbf9cb28"
+                },
+                {
+                  "group": "right",
+                  "id": "7af33cc1-34f2-4ba9-be00-0c395ebf67ec"
+                },
+                {
+                  "group": "bottom",
+                  "id": "4a546fec-6906-44e2-9014-7987faa273d4"
+                },
+                {
+                  "group": "left",
+                  "id": "bb52dfa9-a36d-47ac-9b84-d3ccc0dd17a6"
+                }
+              ]
+            },
+            "id": "dc5a8d06-9af6-486d-a823-894711bfb0ac",
+            "data": {
+              "type": "tm.Process",
+              "name": "Consular \nServices \nModule\n P7",
+              "description": "The Consular Services Unit provides services such as issuing official documents, birth or death certificates, notarizations, etc. It also operates in parallel with other systems.",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": [
+                {
+                  "id": "f0cddaa4-e4ca-4a9d-b32c-e679eb563751",
+                  "title": "Unpatched System ",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "The Consular Services module is running outdated software that contains known vulnerabilities. Attackers may exploit these to gain unauthorized access, modify records and  escalate privileges within the system.",
+                  "mitigation": "Regularly apply security patches and updates\nautomatic update alerts and centralized patch management\nConduct periodic vulnerability assessments ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": ""
+                },
+                {
+                  "id": "44a44c42-6f88-418b-b52a-43cc73bb7e3e",
+                  "title": "Broken Access Control",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "A compromised user account or misconfigured access may allow unauthorized changes to consular documents or services, such as forged travel documents or appointment manipulation.",
+                  "mitigation": "Implement RBAC \nenforce separation of duties\nenable multi-factor authentication for sensitive operations",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 2,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 2
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "diagramTop": 1,
+    "reviewer": "Akmal Ibrahim",
+    "threatTop": 30
+  }
+}
